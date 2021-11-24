@@ -16,6 +16,9 @@ public class Comsumer {
     public void process(Message message, Channel channel) throws IOException {
         // 采用手动应答模式
         channel.basicAck(message.getMessageProperties().getDeliveryTag(), true);
+        /**
+         * basicACK NACK  reject这些有什么区别和作用？
+         */
         log.info("receive: " + new String(message.getBody()));
     }
 
