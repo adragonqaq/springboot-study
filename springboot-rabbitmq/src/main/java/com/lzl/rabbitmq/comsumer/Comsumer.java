@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+/**
+ * @author lzl
+ */
 @Component
 @Slf4j
 public class Comsumer {

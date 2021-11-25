@@ -9,7 +9,7 @@ spring:
     listener:
       simple:
         acknowledge-mode: manual #采用手动应答
-        concurrency: 1 #指定最小的消费者数量
-        max-concurrency: 1 #指定最大的消费者数量
+        concurrency: 1 #指定最小的消费者数量 ,消费端不限流可以不配置
+        max-concurrency: 1 #指定最大的消费者数量，消费端不限流可以不配置
         retry:
           enabled: true #是否支持重试
