@@ -15,6 +15,7 @@ public class Producter {
 
     public void send(){
         String msg = "hello!";
+        //这种方式发送消息默认是持久化消息
         rabbitTemplate.convertAndSend("testExchange","queue-routingKey",msg);
     }
 }
