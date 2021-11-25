@@ -22,17 +22,17 @@
     <description>Spring Boot 整合 ShardingSphere-JDBC</description>
 
     <dependencies>
-        <dependency>
-        <groupId>org.apache.shardingsphere</groupId>
-        <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-        <version>5.0.0-alpha</version>
-        </dependency>
-
 <!--        <dependency>-->
-<!--            <groupId>org.apache.shardingsphere</groupId>-->
-<!--            <artifactId>shardingsphere-jdbc-core</artifactId>-->
-<!--            <version>5.0.0-alpha</version>-->
+<!--        <groupId>org.apache.shardingsphere</groupId>-->
+<!--        <artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+<!--        <version>5.0.0-alpha</version>-->
 <!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core</artifactId>
+            <version>5.0.0-alpha</version>
+        </dependency>
     </dependencies>
 
     <build>
