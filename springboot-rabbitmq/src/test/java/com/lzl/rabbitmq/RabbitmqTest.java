@@ -18,4 +18,9 @@ public class RabbitmqTest {
     public void test(){
         producter.send();
     }
+
+    @Test
+    public void retry(){
+        producter.send2();
+    }
 }

@@ -5,11 +5,12 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.annotation.Resource;
+
 
 /**
  * @author lzl
@@ -18,9 +19,6 @@ import javax.annotation.Resource;
 @Slf4j
 public class RabbitConfig {
 
-
-    @Resource
-    private RabbitTemplate rabbitTemplate;
 
     /**
       * 定义一个test的队列
@@ -36,6 +34,11 @@ public class RabbitConfig {
         return new Queue("test",true);
     }
 
+    @Bean
+    public Queue retryQueue(){
+        return new Queue("retryQueue");
+    }
+
     /**
      * Exchange有以下几个参数
      *  name: 交换机名称
@@ -47,18 +50,24 @@ public class RabbitConfig {
      * @return
      */
     @Bean
-    public DirectExchange testExchange(){
-        return new DirectExchange("testExchange", true, false);
+    public DirectExchange directExchange(){
+        return new DirectExchange("directExchange", true, false);
     }
 
     @Bean
     public Binding binding(Queue testQueue, DirectExchange testExchange){
-        return BindingBuilder.bind(testQueue).to(testExchange).with("queue-routingKey");
+        return BindingBuilder.bind(testQueue).to(testExchange).with("test-routingKey");
     }
 
     @Bean
-    public RabbitTemplate rabbitTemplate(){
+    public Binding bindingRetry(Queue retryQueue, DirectExchange testExchange){
+        return BindingBuilder.bind(retryQueue).to(testExchange).with("retry-routingKey");
+    }
 
+    @Bean
+    public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory){
+
+        RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
         // 消息发送失败返回到队列中, yml需要配置 publisher-returns: true
         /**
          * Mandatory：
@@ -83,11 +92,23 @@ public class RabbitConfig {
          */
         rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> {
             if(ack){
-                log.info("消息发送成功 id:{}",correlationData.getId());
+                if(null != correlationData){
+                    log.info("消息发送成功,消息ID为:{}",correlationData.getId());
+                }
+                log.info("消息发送成功");
             }else {
                 log.error("消息发送失败，原因：{}", cause);
             }
         });
+
+//        rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
+//            @Override
+//            public void confirm(CorrelationData correlationData, boolean b, String s) {
+//                System.out.println("ConfirmCallback    ：相关数据：" + correlationData);
+//                System.out.println("ConfirmCallback    ：确认情况：" + b);
+//                System.out.println("ConfirmCallback    ：原因：" + s);
+//            }
+//        });
         return rabbitTemplate;
     }
 
