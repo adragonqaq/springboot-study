@@ -16,8 +16,8 @@ import java.io.IOException;
 public class Comsumer {
 
     @RabbitListener(queues = "test")
-    public void process(Message message, Channel channel) throws IOException {
-
+    public void process(Message message, Channel channel,String s) throws IOException {
+        log.info(s);
         log.info("receive: " + new String(message.getBody()));
         try {
             /*
