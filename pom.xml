@@ -18,6 +18,7 @@
     <modules>
         <module>springboot-rabbitmq</module>
         <module>springboot-shardingsphere-jdbc</module>
+        <module>springboot-autoTest</module>
     </modules>
 
     <dependencies>
@@ -51,6 +52,17 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <skip>false</skip>
+                    <!-- 定义文件编码，否则nacos配置文件中存在中文会报错 -->
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
             </plugin>
         </plugins>
