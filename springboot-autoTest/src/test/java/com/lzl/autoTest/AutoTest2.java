@@ -5,21 +5,20 @@ import org.junit.Test;
 
 /**
  * @author eren.liao
- * @date 2022/1/25 10:39
+ * @date 2022/1/26 10:40
  */
-public class AutoTest extends SpringBootTestBase {
+public class AutoTest2 extends SpringBootTestBase {
 
 
     @Test
     public void createOrder(){
-        System.out.println("第一次测试");
+        System.out.println("第三次测试");
     }
 
 
 
     @Test
     public void createOrder2(){
-        System.out.println("第二次测试");
+        System.out.println("第四次测试");
     }
-
 }
