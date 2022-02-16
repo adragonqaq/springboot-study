@@ -10,7 +10,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="app_url" elementType="Argument">
             <stringProp name="Argument.name">app_url</stringProp>
-            <stringProp name="Argument.value">https://ksp-shop-test.shijicloud.com//app</stringProp>
+            <stringProp name="Argument.value">https://tttttttttt//app</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="sid" elementType="Argument">
@@ -102,7 +102,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-            <stringProp name="HTTPSampler.path">http://10.15.34.79:3000/mock/11/getOpenId</stringProp>
+            <stringProp name="HTTPSampler.path">http://ttttt/getOpenId</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -217,11 +217,11 @@
                 </elementProp>
               </collectionProp>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">https://ksp-shop-test.shijicloud.com</stringProp>
+            <stringProp name="HTTPSampler.domain">https://tttttttt.shijicloud.com</stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">${app_url}/hotel/front/pageList</stringProp>
+            <stringProp name="HTTPSampler.path">${app_url}/ttttt/pageList</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -258,7 +258,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">${app_url}/hotel/front/getHotel?hid=${hid}</stringProp>
+            <stringProp name="HTTPSampler.path">${app_url}/ttttt/getHotel?hid=${hid}</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -285,7 +285,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">${app_url}/hotel/type/pageList</stringProp>
+            <stringProp name="HTTPSampler.path">${app_url}/ttttt/pageList</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -331,7 +331,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">${app_url}/hotel/rate/get</stringProp>
+            <stringProp name="HTTPSampler.path">${app_url}/ttttt/get</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
