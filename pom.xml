@@ -19,6 +19,7 @@
         <module>springboot-rabbitmq</module>
         <module>springboot-shardingsphere-jdbc</module>
         <module>springboot-autoTest</module>
+        <module>springboot-ai</module>
     </modules>
 
     <dependencies>
