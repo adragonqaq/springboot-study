@@ -15,6 +15,7 @@ public class DemoServiceImpl implements DemoService {
     @Override
     public String getOneResult(String methodName) {
 
+
         return String.format("%s invoker success", methodName);
     }
 
