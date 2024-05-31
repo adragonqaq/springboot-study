@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+
+<h2>普通字符串</h2>
+<table border="0">
+    <tr>
+        <td th:text="'我的名字是：'+${name}"></td>
+    </tr>
+</table>
+
+<h2>JavaBean对象</h2>
+<table bgcolor="#ffe4c4" border="1">
+    <tr>
+        <td>介绍</td>
+        <td th:text="${user.name}"></td>
+    </tr>
+    <tr>
+        <td>年龄</td>
+        <td th:text="${user['age']}"></td>
+    </tr>
+    <tr>
+        <td>介绍</td>
+        <td th:text="${user.getDetail()}"></td>
+    </tr>
+</table>
+
+<h2>List取值</h2>
+<table bgcolor="#ffe4c4" border="1">
+    <tr th:each="item:${userlist}">
+        <td th:text="${item}"></td>
+    </tr>
+</table>
+
+
+
+<h2>Map取值</h2>
+<table bgcolor="#8fbc8f" border="1">
+    <tr>
+        <td>place:</td>
+        <td th:text="${map.get('place')}"></td>
+    </tr>
+    <tr>
+        <td>feeling:</td>
+        <td th:text="${map['feeling']}"></td>
+    </tr>
+</table>
+
+
+<!--遍历 Map：-->
+<!--如果说你想遍历 Map 获取它的 key 和 value 那也是可以的，这里就要使用和 List 相似的遍历方法，使用 th:each="item:${Map名}"  进行遍历，在下面只需使用 item.key  和 item.value  即可获得值。完整代码如下：-->
+<h2>Map遍历</h2>
+<table bgcolor="#ffe4c4" border="1">
+    <tr th:each="item:${map}">
+        <td th:text="${item.key}"></td>
+        <td th:text="${item.value}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

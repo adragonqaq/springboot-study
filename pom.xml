@@ -21,6 +21,7 @@
         <module>springboot-autoTest</module>
         <module>springboot-ai</module>
         <module>springboot-webflux</module>
+        <module>springboot-thymeleaf</module>
     </modules>
 
     <dependencies>
