@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzl.jsp.pk.mapper.UserMapper">
+	
+	<!-- 用户登陆 -->
+  	<select id="userLogin" parameterType="com.lzl.jsp.pk.pojo.UserCustom" resultType="com.lzl.jsp.pk.pojo.UserCustom">
+  		select * from user WHERE name=#{name} and password=#{password}
+  	</select>
+  	<!--用户注册  -->
+  	<insert id="userRegister" parameterType="com.lzl.jsp.pk.pojo.UserCustom">
+  		insert into user(name,password) values(#{name},#{password})
+  	</insert>
+  	<!-- ajax验证用户名 -->
+  	<select id="ajaxRegister" parameterType="string" resultType="com.lzl.jsp.pk.pojo.UserCustom">
+		SELECT * from user WHERE name=#{name};  	
+  	</select>
+  	<!-- 查看用户权限 -->
+  	<select id="userRole" parameterType="com.lzl.jsp.pk.pojo.UserCustom" resultType="string">
+  		select role from user where name=#{name}
+  	</select>
+  	<!-- 修改用户信息跟据用户ID -->
+  	<update id="updateUserById" parameterType="com.lzl.jsp.pk.pojo.UserCustom">
+  	update user set name=#{name},password=#{password},role=#{role} where id=#{id}
+  	</update>
+  	<!-- 删除用户信息跟据用户ID -->
+  	<delete id="deleteUserById" parameterType="int">
+  	delete from user where id=#{id}
+  	</delete>
+  	<!-- 查看所有用户 -->
+  	<select id="showAllUser" resultType="com.lzl.jsp.pk.pojo.UserCustom">
+  	select * from user
+  	</select>
+  	<!-- 查看用户信息根据id -->
+  	<select id="showUserById" resultType="com.lzl.jsp.pk.pojo.UserCustom" parameterType="int">
+  	select * from user where id=#{id}
+  	</select>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzl.jsp.pk.mapper.ClassRoomMapper">
+	<!--  添加教室信息-->
+  	<insert id="addClassRoom" parameterType="com.lzl.jsp.pk.pojo.ClassRoomCustom"  >
+  	insert into classroom(roomname,accptnum,category) values(#{roomname},#{accptnum},#{category});
+  	</insert>
+  	  <!-- 查看所有教室 -->
+	<select id="selectClassRoom" resultType="com.lzl.jsp.pk.pojo.ClassRoomCustom">
+		select * from classroom
+	</select>
+<!-- 根据人数查询教室 -->
+	<select id="findClassRoomByNum" parameterType="int" resultType="com.lzl.jsp.pk.pojo.ClassRoomCustom">
+			SELECT * from classroom where accptnum>#{value}
+	</select>
+</mapper>

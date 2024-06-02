@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzl.jsp.pk.mapper.TeachPlanMapper">
+	
+	<!--  添加教学计划-->
+<insert id="addTeachPlan" parameterType="com.lzl.jsp.pk.pojo.TeachPlanCustom" >
+		insert into teachplan(lesson_name,teacher_name,clazz_name,zks,classroom_name)VALUES(#{lesson_name},#{teacher_name},#{clazz_name},#{zks},#{classroom_name});
+</insert>
+
+<select id="findTeachPlanByName" parameterType="string" resultType="com.lzl.jsp.pk.pojo.TeachPlanCustom">
+		select * from teachplan WHERE clazz_name=#{value}
+</select>
+
+<update id="updateTeachPlanByid" parameterType="com.lzl.jsp.pk.pojo.TeachPlanCustom" >
+   update teachplan set classroom_name=#{classroom_name} where id=#{id}
+</update>
+
+
+</mapper>

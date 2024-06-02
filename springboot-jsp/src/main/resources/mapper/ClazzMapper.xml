@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzl.jsp.pk.mapper.ClazzMapper">
+
+  	<!-- 添加班级信息 -->
+  <insert id="addClass" parameterType="com.lzl.jsp.pk.pojo.ClazzCustom">
+  insert into clazz(classname,classpreson)VALUES(#{classname},#{classpreson});
+  </insert>
+  
+  <!-- 查看所有班级 -->
+<select id="selectClazz" resultType="com.lzl.jsp.pk.pojo.ClazzCustom">
+select * from clazz
+</select>
+
+<!-- 通过班级名称查找班级人数 -->
+<select id="findPresonByName" parameterType="string" resultType="int">
+select classpreson from clazz where classname=#{value}
+</select>
+</mapper>

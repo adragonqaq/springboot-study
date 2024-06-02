@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzl.jsp.pk.mapper.TPContentMapper">
+<!-- 添加课表信息 -->
+ <insert id="savePiKeContent" parameterType="com.lzl.jsp.pk.pojo.TPContentCustom" >
+ 	insert into tpcontent(clazz_name,teachplan_content) values(#{clazz_name},#{teachplan_content})
+ </insert>
+  <!-- 查看排课信息根据班级名称 -->
+  <select id="showPiKeByClazzName" parameterType="string" resultType="com.lzl.jsp.pk.pojo.TPContentCustom">
+  	select * from tpcontent where clazz_name=#{clazz_name}
+  </select>
+  <!-- 修改课表信息根据班级名称 -->
+  <update id="updatePiKeByClazzName" parameterType="com.lzl.jsp.pk.pojo.TPContentCustom" >
+  	update tpcontent set teachplan_content=#{teachplan_content} where clazz_name=#{clazz_name}
+  </update>
+</mapper>
