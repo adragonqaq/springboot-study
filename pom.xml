@@ -24,6 +24,7 @@
         <module>springboot-thymeleaf</module>
         <module>springboot-jsp</module>
         <module>springboot-brave</module>
+        <module>springboot-sleuth</module>
     </modules>
 
     <dependencies>
