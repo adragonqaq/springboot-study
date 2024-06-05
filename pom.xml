@@ -23,6 +23,7 @@
         <module>springboot-webflux</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-jsp</module>
+        <module>springboot-brave</module>
     </modules>
 
     <dependencies>
