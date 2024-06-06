@@ -20,7 +20,7 @@ public class TestController {
     public String test() throws Exception {
 
         TestApi client = Feign.builder()
-                //设置连接和读超时间都是5s
+                //设置连接和读超时间都是5s  如果不设置  默认的就是连接超时10s，读超时60s 源码有配置
                 .options(new Request.Options(5, TimeUnit.SECONDS, 5, TimeUnit.SECONDS, true))
                 .target(TestApi.class, "http://localhost:8088");
 
@@ -44,7 +44,7 @@ public class TestController {
     public String test2() throws Exception {
 
         TestApi client = Feign.builder()
-                //设置连接和读超时间都是5s
+                //设置连接和读超时间都是5s  这里可以去掉，为了体现具体走的哪个超市配置，故保留
                 .options(new Request.Options(5, TimeUnit.SECONDS, 5, TimeUnit.SECONDS, true))
                 .target(TestApi.class, "http://localhost:8088");
 
