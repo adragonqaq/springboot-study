@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lzl</groupId>
+        <artifactId>springboot-study</artifactId>
+        <version>0.0.1</version>
+    </parent>
+
+    <groupId>com.lzl.feign</groupId>
+    <artifactId>springboot-feign</artifactId>
+    <packaging>jar</packaging>
+
+    <name>springboot-feign</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+
+<!--        spring-cloud-starter-openfeign 包含了 openfeign的依赖， 但是和springboot配合使用 版本要正确，要不然会启动报错  java.lang.NoClassDefFoundError: org/springframework/boot/context/properties/   -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
+<!--            <version>2.2.5.RELEASE</version>-->
+<!--        </dependency>-->
+
+
+
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-jackson</artifactId>
+            <version>11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-slf4j</artifactId>
+            <version>11.0</version>
+        </dependency>
+
+    </dependencies>
+</project>
