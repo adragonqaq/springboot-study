@@ -15,6 +15,10 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>openfeign</module>
+        <module>ribbon</module>
+        <module>restTemplate</module>
+        <module>httpclient</module>
+        <module>okHttp</module>
     </modules>
 
     <properties>
