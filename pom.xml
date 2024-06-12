@@ -26,6 +26,8 @@
         <module>springboot-brave</module>
         <module>springboot-sleuth</module>
         <module>springboot-rpc</module>
+        <module>springboot-cloud</module>
+        <module>springboot-cloud/feign-ribbon-hystrix-nacos</module>
 
     </modules>
 
