@@ -25,7 +25,11 @@
         <module>springboot-jsp</module>
         <module>springboot-brave</module>
         <module>springboot-sleuth</module>
-        <module>springboot-feign</module>
+        <module>springboot-rpc</module>
+        <module>springboot-rpc/ribbon</module>
+        <module>springboot-rpc/restTemplate</module>
+        <module>springboot-rpc/httpclient</module>
+        <module>springboot-rpc/okHttp</module>
     </modules>
 
     <dependencies>
