@@ -51,3 +51,11 @@
 </dependency>
 ```
 
+原生相关API使用
+ribbon 的 github地址
+https://github.com/Netflix/ribbon
+
+
+
+如何使用原生的Ribbon
+https://www.cnblogs.com/ZhangZiSheng001/p/15484505.html

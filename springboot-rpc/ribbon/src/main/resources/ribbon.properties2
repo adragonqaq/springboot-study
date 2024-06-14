@@ -1,0 +1,21 @@
+# Max number of retries on the same server (excluding the first try)
+service1.ribbon.MaxAutoRetries=1
+service1.ribbon.MaxAutoRetriesNextServer=1
+service1.ribbon.OkToRetryOnAllOperations=true
+service1.ribbon.ConnectTimeout=3000
+service1.ribbon.ReadTimeout=3000
+# 每分钟更新service1对应服务的可用地址列表
+service1.ribbon.ServerListRefreshInterval=60000
+# service1注册在eureka上的服务名称，重要
+service1.ribbon.DeploymentContextBasedVipAddresses=COMPUTE-SERVICE
+# 指定LoadBalancer使用的ServerList
+service1.ribbon.NIWSServerListClassName=com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+# 指定LoadBalancer使用的负载均衡策略
+service1.ribbon.NFLoadBalancerRuleClassName=com.netflix.loadbalancer.RandomRule
+
+# 控制是否注册自身到eureka中
+eureka.registration.enabled=false
+eureka.serviceUrl.default=http://localhost:9000/eureka
+eureka.region=default
+eureka.preferSameZone=true
+eureka.shouldUseDns=false
