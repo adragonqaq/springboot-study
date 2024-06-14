@@ -17,7 +17,6 @@ import com.netflix.loadbalancer.ILoadBalancer;
 import com.netflix.loadbalancer.RoundRobinRule;
 import com.netflix.loadbalancer.ZoneAwareLoadBalancer;
 
-import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -97,7 +96,7 @@ public class Test {
      */
     public static void useEureka() throws Exception {
         //加载ribbon配置文件
-        ConfigurationManager.loadPropertiesFromResources("ribbon.properties2");
+        ConfigurationManager.loadPropertiesFromResources("ribbon2.properties");
 
         // 最关键的代码，加载配置文件，向Eureka发送请求，获取服务列表。
         DiscoveryManager.getInstance().initComponent(
@@ -119,7 +118,7 @@ public class Test {
      */
     public static void useEureka2() throws Exception {
         //加载ribbon配置文件
-        ConfigurationManager.loadPropertiesFromResources("ribbon.properties2");
+        ConfigurationManager.loadPropertiesFromResources("ribbon2.properties");
 
 // 最关键的代码，加载配置文件，向Eureka发送请求，获取服务列表。
         DiscoveryManager.getInstance().initComponent(
