@@ -1,36 +1,48 @@
 # springboot-study
 
 
-## ³õÖÔ
-¼ÇÂ¼Æ½Ê±ÓÃµ½µÄ»òÕßÑ§Ï°µ½µÄspringbootÏà¹Ø×é¼ş£¬ÎÂ¹Ê¶øÖªĞÂ~
+
+## ç®€ä»‹
+
+å¹³æ—¶ç”¨åˆ°æˆ–è€…å­¦ä¹ åˆ°springbootæŠ€æœ¯ç»„ä»¶åšçš„è®°å½•
+
+æ¸©æ•…è€ŒçŸ¥æ–°~
 
 
 
-## ÏµÍ³Ä£¿é
+## å±‚çº§æ¨¡æ¿
+
+```
 study     
-©À©¤springboot-ai                 //ai
-©À©¤springboot-autoTest           //×Ô¶¯²âÊÔ
-©À©¤springboot-brave              //zipkin¿Í»§¶Ë
-©À©¤springboot-cloud              //ÕûºÏspringcloud ¸÷¸ö×é¼ş
-©¦  ©¸©¤feign-ribbon-hystrix-nacos   
-©À©¤springboot-mq                 //ÏûÏ¢¶ÓÁĞ
-©¦  ©À©¤kafka                      
-©¦  ©À©¤rabbitmq                   
-©¦  ©¸©¤rocketmq                   
-©À©¤springboot-orm                //³Ö¾Ã»¯¿ò¼Ü
-©¦  ©À©¤mybatis                    
-©¦  ©À©¤mybatis-plus               
-©¦  ©¸©¤tkmybatis                  
-©À©¤springboot-rpc                //rpcµ÷ÓÃ·½Ê½
-©¦  ©À©¤httpclient                 
-©¦  ©À©¤okHttp                     
-©¦  ©À©¤openfeign                  
-©¦  ©À©¤restTemplate               
-©¦  ©¸©¤ribbon                     
-©À©¤springboot-shardingsphere-jdbc    //shardingsphere-jdbc·Ö¿â·Ö±í
-©À©¤springboot-sleuth                 //springcloud-sleuth µ÷ÓÃÁ´Â·
-©À©¤springboot-template-engine        // Ä£°åÒıÇæ
-©¦  ©À©¤freemarker                 
-©¦  ©À©¤jsp
-©¦  ©¸©¤thymeleaf
-©¸©¤springboot-webflux                //ÏìÓ¦Ê½±à³Ì
+â”œâ”€springboot-ai                 //ai
+â”œâ”€springboot-autoTest           //è‡ªåŠ¨æµ‹è¯•
+â”œâ”€springboot-brave              //zipkinå®¢æˆ·ç«¯
+â”œâ”€springboot-cloud              //æ•´åˆspringcloud å„ä¸ªç»„ä»¶
+â”‚  â””â”€feign-ribbon-hystrix-nacos   
+â”œâ”€springboot-mq                 //æ¶ˆæ¯é˜Ÿåˆ—
+â”‚  â”œâ”€kafka                      
+â”‚  â”œâ”€rabbitmq                   
+â”‚  â””â”€rocketmq                   
+â”œâ”€springboot-orm                //æŒä¹…åŒ–æ¡†æ¶
+â”‚  â”œâ”€mybatis                    
+â”‚  â”œâ”€mybatis-plus               
+â”‚  â””â”€tkmybatis                  
+â”œâ”€springboot-rpc                //rpcè°ƒç”¨æ–¹å¼
+â”‚  â”œâ”€httpclient                 
+â”‚  â”œâ”€okHttp                     
+â”‚  â”œâ”€openfeign                  
+â”‚  â”œâ”€restTemplate               
+â”‚  â””â”€ribbon                     
+â”œâ”€springboot-shardingsphere-jdbc    //shardingsphere-jdbcåˆ†åº“åˆ†è¡¨
+â”œâ”€springboot-sleuth                 //springcloud-sleuth è°ƒç”¨é“¾è·¯
+â”œâ”€springboot-template-engine        // æ¨¡æ¿å¼•æ“
+â”‚  â”œâ”€freemarker                 
+â”‚  â”œâ”€jsp
+â”‚  â””â”€thymeleaf
+â””â”€springboot-webflux                //å“åº”å¼ç¼–ç¨‹
+```
+
+
+
+
+
