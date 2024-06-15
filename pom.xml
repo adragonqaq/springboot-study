@@ -37,6 +37,7 @@
         <module>springboot-orm</module>
         <module>springboot-template-engine</module>
         <module>springboot-mq</module>
+        <module>springboot-db-connection-pool</module>
 
     </modules>
 
