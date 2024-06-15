@@ -24,17 +24,20 @@
     </parent>
 
     <modules>
-        <module>springboot-rabbitmq</module>
+
         <module>springboot-shardingsphere-jdbc</module>
         <module>springboot-autoTest</module>
         <module>springboot-ai</module>
         <module>springboot-webflux</module>
-        <module>springboot-thymeleaf</module>
-        <module>springboot-jsp</module>
+
         <module>springboot-brave</module>
         <module>springboot-sleuth</module>
         <module>springboot-rpc</module>
         <module>springboot-cloud</module>
+        <module>springboot-orm</module>
+        <module>springboot-template-engine</module>
+        <module>springboot-mq</module>
+
 
     </modules>
 

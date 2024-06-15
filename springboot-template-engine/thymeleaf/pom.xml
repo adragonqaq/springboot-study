@@ -2,13 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.lzl</groupId>
-        <artifactId>springboot-study</artifactId>
+        <groupId>com.lzl.template-engine</groupId>
+        <artifactId>springboot-template-engine</artifactId>
         <version>0.0.1</version>
     </parent>
 
     <groupId>com.lzl.thymeleaf</groupId>
-    <artifactId>springboot-thymeleaf</artifactId>
+    <artifactId>thymeleaf</artifactId>
     <packaging>jar</packaging>
 
     <name>springboot-thymeleaf</name>
