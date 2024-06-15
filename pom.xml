@@ -38,7 +38,6 @@
         <module>springboot-template-engine</module>
         <module>springboot-mq</module>
 
-
     </modules>
 
     <dependencies>
