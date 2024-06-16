@@ -1,0 +1,17 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mymall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true&serverTimezone=UTC&useSSL=false&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+# mybatis和tkmybatis可以同时使用
+
+mybatis:
+  # 搜索指定包别名
+#  typeAliasesPackage:
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/*.xml
+  # 加载全局的配置文件
+#  configLocation: classpath:mybatis/mybatis-config.xml
