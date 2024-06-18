@@ -1,4 +1,4 @@
-package com.lzl.alibaba-ai;
+package com.lzl.alibabaai;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

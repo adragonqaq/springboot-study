@@ -1,4 +1,4 @@
-package com.lzl.spring-ai;
+package com.lzl.springai;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
