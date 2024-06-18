@@ -1,4 +1,4 @@
-package com.lzl.ai.controller;
+package com.lzl.springai.controller;
 
 import org.springframework.ai.chat.ChatResponse;
 import org.springframework.ai.chat.messages.UserMessage;

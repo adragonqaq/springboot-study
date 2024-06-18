@@ -2,22 +2,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.lzl</groupId>
-        <artifactId>springboot-study</artifactId>
+        <groupId>com.lzl.mq</groupId>
+        <artifactId>springboot-mq</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <groupId>com.lzl.db-conection-pool</groupId>
-    <artifactId>springboot-db-connection-pool</artifactId>
-    <packaging>pom</packaging>
+    <groupId>com.lzl.disruptor</groupId>
+    <artifactId>disruptor</artifactId>
+    <packaging>jar</packaging>
 
-    <name>springboot-db-conection-pool</name>
+    <name>disruptor</name>
     <url>http://maven.apache.org</url>
-
-    <modules>
-        <module>hikari</module>
-        <module>druid</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

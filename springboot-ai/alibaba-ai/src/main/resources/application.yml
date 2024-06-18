@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: alibaba-spring-ai-demo
+
+  cloud:
+    ai:
+      tongyi:
+        api-key: \u4F60\u7684api-key  #\u963F\u91CC\u4E91\u901A\u4E49\u5343\u95EE\u7684Api-Key \u5B98\u7F51\u4E0A\u7533\u8BF7

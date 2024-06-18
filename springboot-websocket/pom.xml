@@ -7,20 +7,12 @@
         <version>0.0.1</version>
     </parent>
 
-    <groupId>com.lzl.rpc</groupId>
-    <artifactId>springboot-rpc</artifactId>
-    <packaging>pom</packaging>
+    <groupId>com.lzl.websocket</groupId>
+    <artifactId>springboot-websocket</artifactId>
+    <packaging>jar</packaging>
 
-    <name>springboot-rpc</name>
+    <name>sprinboot-websocket</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>openfeign</module>
-        <module>ribbon</module>
-        <module>restTemplate</module>
-        <module>httpclient</module>
-        <module>okHttp</module>
-        <module>retrofit</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,13 +24,6 @@
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
-        <dependency>
-            <groupId>com.alibaba.fastjson2</groupId>
-            <artifactId>fastjson2</artifactId>
-            <version>2.0.51</version>
         </dependency>
     </dependencies>
 </project>

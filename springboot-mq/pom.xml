@@ -18,6 +18,7 @@
         <module>rabbitmq</module>
         <module>kafka</module>
         <module>rocketmq</module>
+        <module>disruptor</module>
     </modules>
 
     <properties>

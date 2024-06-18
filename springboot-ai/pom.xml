@@ -11,6 +11,13 @@
 
     <groupId>com.lzl.ai</groupId>
     <artifactId>springboot-ai</artifactId>
+    <packaging>pom</packaging>
+
+    <name>springboot-ai</name>
+    <modules>
+        <module>spring-ai</module>
+        <module>alibaba-ai</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -21,19 +28,7 @@
 
     <dependencies>
 
-<!--        拉不下-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.ai</groupId>-->
-<!--            <artifactId>spring-ai-openai-spring-boot-starter</artifactId>-->
-<!--            <version>0.8.1</version>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>io.springboot.ai</groupId>
-            <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
-
 
 
 </project>

@@ -15,14 +15,17 @@
 ```
 study     
 ├─springboot-ai                 //ai
+│  └─alibaba-ai
+│  └─spring-ai
 ├─springboot-autoTest           //自动测试
 ├─springboot-brave              //zipkin客户端
 ├─springboot-cloud              //整合springcloud 各个组件
 │  └─feign-ribbon-hystrix-nacos   
 ├─springboot-db-connection-pook              //数据库连接池
 │  └─druid   
-│  └─hikariCP   
+│  └─hikari
 ├─springboot-mq                 //消息队列
+│  ├─disruptor   
 │  ├─kafka                      
 │  ├─rabbitmq                   
 │  └─rocketmq                   
@@ -43,6 +46,7 @@ study
 │  ├─jsp
 │  └─thymeleaf
 └─springboot-webflux                //响应式编程
+└─springboot-websocket                //http长连接
 ```
 
 
