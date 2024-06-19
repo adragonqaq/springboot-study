@@ -39,6 +39,8 @@
         <module>springboot-mq</module>
         <module>springboot-db-connection-pool</module>
         <module>springboot-websocket</module>
+        <module>springboot-security</module>
+
 
     </modules>
 
