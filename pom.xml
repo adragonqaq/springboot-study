@@ -40,6 +40,8 @@
         <module>springboot-db-connection-pool</module>
         <module>springboot-websocket</module>
         <module>springboot-security</module>
+        <module>springboot-multi-db-source</module>
+        <module>springboot-starter</module>
 
 
     </modules>
