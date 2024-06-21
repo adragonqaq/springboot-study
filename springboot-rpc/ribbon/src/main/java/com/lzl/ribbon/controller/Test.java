@@ -104,7 +104,7 @@ public class Test {
                 new DefaultEurekaClientConfig());
 
         //ClientFactory.getNamedLoadBalancer会缓存结果, 所以不用担心它每次都会向eureka发起查询
-        //参数service1，是ribbon.properties配置文件中配置项的前缀名
+        //参数service1，是ribbon2.properties配置文件中配置项的前缀名
         DynamicServerListLoadBalancer lb =
                 (DynamicServerListLoadBalancer) ClientFactory.getNamedLoadBalancer("service1");
         System.out.println(lb.getReachableServers());
