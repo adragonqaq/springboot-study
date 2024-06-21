@@ -14,6 +14,8 @@ ribbon:
   MaxAutoRetries: 0
 
   retryableStatusCodes: ''
+  # retryableStatusCodes属性(此参数可在配置文件中配置’ribbon.retryableStatusCodes’或’service-x.ribbon.retryableStatusCodes’，默认值是空字符串，多值http status时可用逗号隔开)，这个属性是表示http状态行在这些指定范围内就可重试
+
 
 
 #只针对  sevice-x生效

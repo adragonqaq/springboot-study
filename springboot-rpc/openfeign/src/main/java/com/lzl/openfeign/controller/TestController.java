@@ -21,6 +21,10 @@ public class TestController {
     @GetMapping("/test")
     public String test() throws Exception {
 
+        // 这种是feign 硬编码的方式，feign.Retryer有个默认实现类 feign.Retryer.Default
+        // 会构建一个间隔100毫秒、最多重试5次的重试器Retryer,  是 feign.Feign.Builder#retryer的默认值
+
+
         TestApi client = Feign.builder()
                 //设置连接和读超时间都是5s  如果不设置  默认的就是连接超时10s，读超时60s 源码有配置
                 .options(new Request.Options(5, TimeUnit.SECONDS, 5, TimeUnit.SECONDS, true))
