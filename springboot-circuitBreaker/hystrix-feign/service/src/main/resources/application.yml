@@ -2,6 +2,8 @@
 
 
 # feign 开启 hystrix  false的话，执行方法调用的时候走FeignInvocationHandler 。  true的话 走 HystrixInvocationHandler
+# Feign是自带Hystrix熔断器的，不过在D版本之后，熔断器默认是关闭的，需要通过如下配置进行开启。
+# Feign支持通过配置的方式，开启请求和返回的GZIP压缩，减少请求的网络消耗
 feign:
   hystrix:
     enabled: true
@@ -12,9 +14,11 @@ hystrix:
     ## 全局默认配置
     default:
       execution:
+        timeout:
+          enabled: true
         isolation:
           thread:
-            timeoutInMilliseconds: 12000
+            timeoutInMilliseconds: 12000  # 该配置需要比ribbon超时时间长
 
     ## 单独设置
     hystrix-feing-client:
@@ -34,3 +38,10 @@ hystrix:
       coreSize: 50
       maxQueueSize: 50
       queueSizeRejectionThreshold: 25
+
+
+#ribbon:
+#  ReadTimeout: 500
+#  ConnectTimeout: 500
+#  ExecTimeout: 500
+#  MaxAutoRetries: 1 # 最好设置超时重试
