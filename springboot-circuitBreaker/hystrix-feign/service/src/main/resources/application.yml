@@ -1,0 +1,36 @@
+
+
+
+# feign 开启 hystrix  false的话，执行方法调用的时候走FeignInvocationHandler 。  true的话 走 HystrixInvocationHandler
+feign:
+  hystrix:
+    enabled: true
+
+
+hystrix:
+  command:
+    ## 全局默认配置
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 12000
+
+    ## 单独设置
+    hystrix-feing-client:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+
+#      fallback:
+#        enabled: false
+
+#      circuitBreaker:
+#        enabled: false
+
+  threadpool:
+    default:
+      coreSize: 50
+      maxQueueSize: 50
+      queueSizeRejectionThreshold: 25
