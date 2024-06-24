@@ -45,3 +45,12 @@ hystrix:
 #  ConnectTimeout: 500
 #  ExecTimeout: 500
 #  MaxAutoRetries: 1 # 最好设置超时重试
+
+# 针对重试次数不生效问题是这样的，刚开始我认为的MaxAutoRetries和MaxAutoRetriesNextServer都配置为1，重试次数为1次，一共请求2次。
+#
+#其实当MaxAutoRetriesNextServer为1时，请求超时或失败后不论有几个实例都会切换一次，也就是说即使只有1个实例，也会切换到自己，然后再去请求，所以就出现了重试次数为3次的现象（第一次超时重试+切换实例请求+切换实例超时重试）。
+#
+#所以Ribbon请求最多会被执行(1 + maxAutoRetries ) * (1 + MaxAutoRetriesNextServer)次。
+
+
+#  https://www.cnblogs.com/wangerdan/articles/17859211.html
