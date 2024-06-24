@@ -12,7 +12,7 @@ public class CiientApiFallbackFactory implements FallbackFactory<ClientApi> {
     @Override
     public ClientApi create(Throwable cause) {
 
-        log.error("异常:{}", cause.getMessage(), cause);
+        log.error("异常描述:{}，异常原因：{}", cause.getMessage(),cause.getCause(), cause);
         return new ClientApi() {
             @Override
             public String sayHello() {

@@ -5,10 +5,24 @@
 feign:
   hystrix:
     enabled: false
+
+
+  # 加了自定义配置 则 ribbon的 超时配置则不生效
 #  client:
 #    config:
+#      # 只对这个Feign客户端生效  如果是defult则是全局
 #      default:
-#        logger-level: full   #最高级别日志   低到高none basic  headers full  建议使用null和basic模式、调试可以开启full模式。
+#        # NONE：不记录任何日志信息，默认是 NONE 配置。 B
+#        # BASIC：只记录发起请求的方法，请求的 URL 地址，请求状态码和请求的响应时间。
+#        # HEADERS：在 BASIC 级别的基础上，还多记录了请求头和响应头的信息。
+#        # FULL：记录所有的日志信息，包括请求和响应的所有具体信息。
+#        logger-level: BASIC #  日志级别
+
+# springboot 默认是logback, 注意要把级别调整为debug， 要不然 feign的 logger-level 依然不会打印出来
+logging:
+  level:
+    com:
+      lzl: debug #com.cloud为包路径
 
 
 hystrix:
