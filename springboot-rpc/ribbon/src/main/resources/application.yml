@@ -6,11 +6,11 @@ ribbon:
   ConnectTimeout: 5000
   #请求处理/响应的超时时间
   ReadTimeout: 5000
-  #对所有操作请求都进行重试
+  #对所有操作请求都进行重试  默认在get请求下会重试，其他情况不会重试
   OkToRetryOnAllOperations: false
-  #切换实例的重试次数
+  #切换实例的重试次数  要重试的下一个服务器的最大数量（不包括第一个服务器）
   MaxAutoRetriesNextServer: 0
-  #当前实例的重试次数
+  #当前实例的重试次数 同一服务器上的最大重试次数（不包括首次尝试）
   MaxAutoRetries: 0
 
   retryableStatusCodes: ''

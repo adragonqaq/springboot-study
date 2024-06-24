@@ -1,12 +1,14 @@
 
-
-
 # feign 开启 hystrix  false的话，执行方法调用的时候走FeignInvocationHandler 。  true的话 走 HystrixInvocationHandler
 # Feign是自带Hystrix熔断器的，不过在D版本之后，熔断器默认是关闭的，需要通过如下配置进行开启。
 # Feign支持通过配置的方式，开启请求和返回的GZIP压缩，减少请求的网络消耗
 feign:
   hystrix:
-    enabled: true
+    enabled: false
+#  client:
+#    config:
+#      default:
+#        logger-level: full   #最高级别日志   低到高none basic  headers full  建议使用null和basic模式、调试可以开启full模式。
 
 
 hystrix:
@@ -25,7 +27,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 1000
+            timeoutInMilliseconds: 10000
 
 #      fallback:
 #        enabled: false
@@ -40,11 +42,18 @@ hystrix:
       queueSizeRejectionThreshold: 25
 
 
-#ribbon:
-#  ReadTimeout: 500
-#  ConnectTimeout: 500
-#  ExecTimeout: 500
-#  MaxAutoRetries: 1 # 最好设置超时重试
+# 对所有的服务该配置都生效
+ribbon:
+  #请求连接的超时时间
+  ConnectTimeout: 5000
+  #请求处理/响应的超时时间
+  ReadTimeout: 1000
+  #对所有操作请求都进行重试  默认在get请求下会重试，其他情况不会重试
+  OkToRetryOnAllOperations: false
+  #切换实例的重试次数  要重试的下一个服务器的最大数量（不包括第一个服务器）
+  MaxAutoRetriesNextServer: 0
+  #当前实例的重试次数 同一服务器上的最大重试次数（不包括首次尝试）
+  MaxAutoRetries: 0
 
 # 针对重试次数不生效问题是这样的，刚开始我认为的MaxAutoRetries和MaxAutoRetriesNextServer都配置为1，重试次数为1次，一共请求2次。
 #
