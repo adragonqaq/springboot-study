@@ -43,6 +43,7 @@
         <module>springboot-multi-db-source</module>
         <module>springboot-starter</module>
         <module>springboot-circuitBreaker</module>
+        <module>springboot-load-balance</module>
 
 
     </modules>
