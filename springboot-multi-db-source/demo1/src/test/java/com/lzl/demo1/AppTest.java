@@ -1,4 +1,4 @@
-package com.lzl.multiDbSource;
+package com.lzl.demo1;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

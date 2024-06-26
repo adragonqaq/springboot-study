@@ -9,7 +9,11 @@
 
     <groupId>com.lzl.multiDbSource</groupId>
     <artifactId>springboot-multi-db-source</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>demo1</module>
+    </modules>
 
     <name>springboot-multi-db-source</name>
     <url>http://maven.apache.org</url>
