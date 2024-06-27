@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo2
+
+
+
+  datasource:
+    password:
+      db1:
+        url: jdbc:mysql://localhost:3306/db1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root
+
+      db2:
+        url: jdbc:mysql://localhost:3306/db2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root

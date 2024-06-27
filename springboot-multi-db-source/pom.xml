@@ -12,7 +12,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>demo1</module>
+        <module>dynamic-datasource</module>
+        <module>mulit-mapper</module>
+        <module>sqlSessionTemplate</module>
     </modules>
 
     <name>springboot-multi-db-source</name>

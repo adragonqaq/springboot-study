@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>com.lzl.demo1</groupId>
-    <artifactId>demo1</artifactId>
+    <artifactId>dynamic-datasource</artifactId>
     <packaging>jar</packaging>
 
     <name>demo1</name>
