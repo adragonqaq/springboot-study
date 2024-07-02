@@ -4,15 +4,15 @@ spring:
     port: 5672
     username: guest
     password: guest
-    publisher-confirms: true #消息发送到交换机确认机制，是否确认回调
-    publisher-returns: true #消息发送到交换机确认机制，是否返回回调
-    listener:
-      simple:
-        acknowledge-mode: manual #采用手动应答
+#    publisher-confirms: true #消息发送到交换机确认机制，是否确认回调
+#    publisher-returns: true #消息发送到交换机确认机制，是否返回回调
+#    listener:
+#      simple:
+#        acknowledge-mode: manual #采用手动应答
 #        concurrency: 1 #指定最小的消费者数量 ,消费端不限流可以不配置
 #        max-concurrency: 1 #指定最大的消费者数量，消费端不限流可以不配置
-        retry:
-          enabled: true #是否支持重试
+#        retry:
+#          enabled: true #是否支持重试
 #          max-interval: 5000ms #最大重试时间间隔，单位毫秒
 #          max-attempts: 3 #最大重试传递次数
 #          initial-interval: 5000ms #第一次和第二次尝试传递消息的间隔时间 单位毫秒

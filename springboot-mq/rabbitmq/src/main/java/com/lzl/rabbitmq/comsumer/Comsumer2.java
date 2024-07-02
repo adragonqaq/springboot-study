@@ -34,13 +34,14 @@ public class Comsumer2 {
     @RabbitListener(queues = "retryQueue")
     public void process(Message message, Channel channel) throws IOException {
         String receiveMes = new String(message.getBody());
-        log.info("receive: {}",receiveMes);
+        log.info("receive: {} 开始消费",receiveMes);
         try {
             // 模拟执行任务
             Thread.sleep(1000);
             int i = 1/0;
             // 确认收到消息，false只确认当前consumer一个消息收到，true确认所有consumer获得的消息
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
+            log.info("消费完成");
         } catch (Exception e) {
             if (message.getMessageProperties().getRedelivered()) {
                 log.error("消息已重复处理失败,拒绝再次接收！");

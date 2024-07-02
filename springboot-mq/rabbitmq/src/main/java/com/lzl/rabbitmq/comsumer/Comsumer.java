@@ -18,13 +18,15 @@ public class Comsumer {
     @RabbitListener(queues = "test")
     public void process(Message message, Channel channel,String s) throws IOException {
         log.info(s);
-        log.info("receive: " + new String(message.getBody()));
+        log.info("receive: {} 开始消费" , new String(message.getBody()));
         try {
             /*
              ... 业务操作
              */
+            Thread.sleep(30000);
             // 采用手动应答模式，注意设置了手动模式，就必须ACK。
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), true);
+            log.info("消费完成");
         }catch (Exception e){
             //表示拒绝消费，此消息重新回到队列终
             channel.basicNack(message.getMessageProperties().getDeliveryTag(),false,true);
