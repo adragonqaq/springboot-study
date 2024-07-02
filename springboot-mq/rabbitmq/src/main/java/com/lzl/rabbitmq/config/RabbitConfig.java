@@ -50,8 +50,8 @@ public class RabbitConfig {
      * @return
      */
     @Bean
-    public DirectExchange directExchange(){
-        return new DirectExchange("directExchange", true, false);
+    public DirectExchange testExchange(){
+        return new DirectExchange("testExchange", true, false);
     }
 
     @Bean

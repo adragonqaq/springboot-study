@@ -24,15 +24,15 @@ public class Producter {
         //这种方式发送消息默认是持久化消息
         CorrelationData correlationData = new CorrelationData();
         correlationData.setId("123");
-//        rabbitTemplate.convertAndSend("directExchange","test-routingKey",msg,correlationData);
-        amqpTemplate.convertAndSend("directExchange","test-routingKey",msg);
+//        rabbitTemplate.convertAndSend("testExchange","test-routingKey",msg,correlationData);
+        amqpTemplate.convertAndSend("testExchange","test-routingKey",msg);
     }
 
 
     public void send2(){
         String msg = "retry!";
         //这种方式发送消息默认是持久化消息
-//        rabbitTemplate.convertAndSend("directExchange","retry-routingKey",msg);
-        amqpTemplate.convertAndSend("directExchange","retry-routingKey",msg);
+//        rabbitTemplate.convertAndSend("testExchange","retry-routingKey",msg);
+        amqpTemplate.convertAndSend("testExchange","retry-routingKey",msg);
     }
 }
