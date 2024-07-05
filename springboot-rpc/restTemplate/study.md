@@ -25,3 +25,13 @@ ClientHttpRequestFactory接口主要提供了三种实现方式
 
 RestTemplate默认是使用SimpleClientHttpRequestFactory，内部是调用jdk的HttpConnection，默认超时为-1
 
+
+
+springboot 自动断开会话
+
+，servlet 容器会创建一个会话，并将会话的唯一标在 Spring Boot 中，会话管理是由 servlet 容器负责的。当客户端与服务器建立连接后，识符(session lD)通过 Cookie 或 URL 传递给客户端。默认情下，会话在客户端关闭或超过一定时间(由服务器配置)后会自动断开。
+如果你想在 Spring Boot 中自定义会话的超时时间，可以在应用配置文件(如 application.properties 或 application.yml)中添加以下配置
+
+
+springboot配置http连接超时时间主动断开避免产生大量close_wait
+https://blog.csdn.net/qq_36256590/article/details/130773174

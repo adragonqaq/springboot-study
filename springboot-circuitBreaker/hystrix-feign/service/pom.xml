@@ -26,21 +26,27 @@
             <scope>test</scope>
         </dependency>
 
+<!--        feign客户端-->
         <dependency>
             <groupId>com.lzl.clientApi</groupId>
             <artifactId>client-api</artifactId>
             <version>0.0.1</version>
         </dependency>
-
+<!--        hystrix-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-
-
+<!--        nacos-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+<!--        feign集成httpclient-->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>10.1.0</version>
         </dependency>
 
     </dependencies>

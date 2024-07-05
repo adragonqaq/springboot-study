@@ -4,19 +4,24 @@
 # Feign支持通过配置的方式，开启请求和返回的GZIP压缩，减少请求的网络消耗
 feign:
   hystrix:
-    enabled: false
+    enabled: true
+  httpclient:
+    enabled: true
 
 
   # 加了自定义配置 则 ribbon的 超时配置则不生效
 #  client:
 #    config:
-#      # 只对这个Feign客户端生效  如果是defult则是全局
+      # 只对这个Feign客户端生效  如果是defult则是全局
 #      default:
 #        # NONE：不记录任何日志信息，默认是 NONE 配置。 B
 #        # BASIC：只记录发起请求的方法，请求的 URL 地址，请求状态码和请求的响应时间。
 #        # HEADERS：在 BASIC 级别的基础上，还多记录了请求头和响应头的信息。
 #        # FULL：记录所有的日志信息，包括请求和响应的所有具体信息。
 #        logger-level: BASIC #  日志级别
+
+#      hystrix-feing-client:
+#        logger-level: FULL #  日志级别
 
 # springboot 默认是logback, 注意要把级别调整为debug， 要不然 feign的 logger-level 依然不会打印出来
 logging:
@@ -59,15 +64,15 @@ hystrix:
 # 对所有的服务该配置都生效
 ribbon:
   #请求连接的超时时间
-  ConnectTimeout: 5000
+  ConnectTimeout: 500
   #请求处理/响应的超时时间
-  ReadTimeout: 1000
+  ReadTimeout: 100
   #对所有操作请求都进行重试  默认在get请求下会重试，其他情况不会重试
-  OkToRetryOnAllOperations: false
+  OkToRetryOnAllOperations: true
   #切换实例的重试次数  要重试的下一个服务器的最大数量（不包括第一个服务器）
-  MaxAutoRetriesNextServer: 0
+  MaxAutoRetriesNextServer: 1
   #当前实例的重试次数 同一服务器上的最大重试次数（不包括首次尝试）
-  MaxAutoRetries: 0
+  MaxAutoRetries: 1
 
 # 针对重试次数不生效问题是这样的，刚开始我认为的MaxAutoRetries和MaxAutoRetriesNextServer都配置为1，重试次数为1次，一共请求2次。
 #

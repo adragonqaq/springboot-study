@@ -1,7 +1,10 @@
 package com.lzl.config;
 
 import feign.Logger;
+import feign.Retryer;
 import org.springframework.context.annotation.Bean;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 
 /**
@@ -18,4 +21,11 @@ public class ClientApiConfig {
     public Logger feignLogger() {
         return new FeignLogger();
     }
+
+
+    @Bean
+    public Retryer retryer(){
+        return new Retryer.Default(100,SECONDS.toMillis(1),2);
+    }
+
 }

@@ -11,8 +11,10 @@ public class TestController {
 
     @GetMapping("/sayHello")
     public String sayHello() throws InterruptedException {
+
+        System.out.println("有请求进来了");
         // 模拟超时
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         return "hello";
     }
