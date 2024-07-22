@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
@@ -104,6 +105,23 @@ public class RestTemplateConfig {
                 .readTimeout(5, TimeUnit.SECONDS)
                 .build();
         return new OkHttp3ClientHttpRequestFactory(okHttpClient);
+    }
+
+
+    /**
+     * 们使用了 SimpleClientHttpRequestFactory，它是 RestTemplate 的默认请求工厂，用来包装 HttpURLConnection。
+     * 通过设置 setConnectTimeout 和 setReadTimeout 方法，我们可以分别为连接和读取操作设置超时时间
+     * @return
+     */
+    private ClientHttpRequestFactory getDefalutClientHttpRequestFactory(){
+        // 创建SimpleClientHttpRequestFactory的实例
+        SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+        // 设置连接超时时间（单位：毫秒）
+        requestFactory.setConnectTimeout(5000); // 5秒
+
+        // 设置读取超时时间（单位：毫秒）
+        requestFactory.setReadTimeout(5000); // 5秒
+        return requestFactory;
     }
 
 
