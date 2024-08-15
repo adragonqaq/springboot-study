@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 配置控制台输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 配置日志打印格式 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] ${PID:- } %logger{36} %-5level %logger{50} %L - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 配置输出级别，加入输出方式 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

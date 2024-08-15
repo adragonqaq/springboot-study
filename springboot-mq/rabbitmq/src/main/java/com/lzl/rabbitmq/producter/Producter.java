@@ -35,4 +35,30 @@ public class Producter {
 //        rabbitTemplate.convertAndSend("testExchange","retry-routingKey",msg);
         amqpTemplate.convertAndSend("testExchange","retry-routingKey",msg);
     }
+
+
+    public void send3(){
+
+        for(int i = 0;i<1000;i++){
+            String msg = "消费超时消息!";
+            amqpTemplate.convertAndSend("testExchange","test-consumer-timeout",msg);
+        }
+    }
+
+    public void send4(){
+
+        for(int i = 0;i<1000;i++){
+            String msg = "消费超时消息!";
+            amqpTemplate.convertAndSend("testExchange","test-consumer-timeout2",msg);
+        }
+    }
+
+
+    public void send5(){
+
+        for(int i = 0;i<1000;i++){
+            String msg = "消费超时消息!";
+            amqpTemplate.convertAndSend("testExchange","test-consumer-timeout3",msg);
+        }
+    }
 }

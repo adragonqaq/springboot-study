@@ -30,4 +30,22 @@ public class TestController {
     public void send2() {
         producter.send2();
     }
+
+    @GetMapping(value = "/send3")
+    @ResponseBody
+    public void send3() {
+        producter.send3();
+    }
+
+    @GetMapping(value = "/send4")
+    @ResponseBody
+    public void send4() {
+        producter.send4();
+    }
+
+    @GetMapping(value = "/send5")
+    @ResponseBody
+    public void send5() {
+        producter.send5();
+    }
 }
