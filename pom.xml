@@ -44,6 +44,7 @@
         <module>springboot-starter</module>
         <module>springboot-circuitBreaker</module>
         <module>springboot-load-balance</module>
+        <module>springboot-geohash</module>
 
 
     </modules>

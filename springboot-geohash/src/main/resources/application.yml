@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: rider-dispatch-system
+  # Redis配置 单节点
+#  redis:
+#    host: 10.15.34.95
+#    port: 6379
+#    password: Rdis@202105
+#    timeout: 2000ms
+#    lettuce:
+#      pool:
+#        max-active: 200  # 最大连接数
+#        max-idle: 50     # 最大空闲连接数
+
+
+  # Redis配置 集群配置
+  redis:
+    cluster:
+      nodes:
+        - 10.15.34.98:6379
+        - 10.15.34.96:6379
+        - 10.15.34.98:6379
+        - 10.15.34.95:6380
+        - 10.15.34.96:6380
+        - 10.15.34.98:6380
+      max-redirects: 3
+    password: Rdis@202105
+    timeout: 2000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
+# 派单业务配置
+dispatch:
+  max-distance: 3000    # 最大派单距离（米）
+  max-order-count: 3    # 骑手最大同时接单量
+  geohash-precision: 6  # GeoHash精度（6位≈1公里）
+# 骑手位置配置
+rider:
+  location:
+    update-interval: 3000  # 位置更新间隔（毫秒）
+    timeout: 10000         # 位置超时时间（超过10秒未更新置为离线）
