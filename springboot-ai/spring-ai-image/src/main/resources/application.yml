@@ -1,0 +1,9 @@
+server:
+  port: 8096
+spring:
+  application:
+    name: ai-image
+  ai:
+    dashscope:
+      # 阿里云百炼平台申请一个key
+      api-key: slinfslgnsngklsngkln

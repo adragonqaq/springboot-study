@@ -17,6 +17,7 @@
     <modules>
         <module>spring-ai</module>
         <module>alibaba-ai</module>
+        <module>spring-ai-image</module>
     </modules>
 
     <properties>
