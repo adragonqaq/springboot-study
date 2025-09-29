@@ -18,6 +18,7 @@
         <module>spring-ai</module>
         <module>alibaba-ai</module>
         <module>spring-ai-image</module>
+        <module>spring-ai-mcp-openfeign</module>
     </modules>
 
     <properties>

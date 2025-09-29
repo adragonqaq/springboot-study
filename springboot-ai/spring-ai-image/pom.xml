@@ -20,7 +20,17 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>3.4.5</spring-boot.version>
         <spring-ai-alibaba.version>1.0.0.2</spring-ai-alibaba.version>
+
+        <!-- Spring AI -->
+        <spring-ai.version>1.0.0-M6</spring-ai.version>
         <lombok.version>1.18.36</lombok.version>
+
+        <!-- 与 Boot 2.3.8 匹配的 framework 版本 -->
+        <spring.version>5.2.12.RELEASE</spring.version>
+
+        <!--        // 调整版本 和当前boot版本对应 -->
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+
     </properties>
 
     <dependencies>
@@ -47,6 +57,15 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -64,4 +83,13 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
 </project>

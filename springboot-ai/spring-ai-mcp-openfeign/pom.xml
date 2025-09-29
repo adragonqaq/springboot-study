@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lzl.ai</groupId>
+        <artifactId>springboot-ai</artifactId>
+        <version>0.0.1</version>
+    </parent>
+
+    <groupId>com.lzl.springai.mcp.openfeign</groupId>
+    <artifactId>spring-ai-mcp-openfeign</artifactId>
+    <packaging>jar</packaging>
+
+    <name>spring-ai-mcp-openfeign</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+
+<!--        | Boot 版本 | Cloud  train | Framework 默认 |-->
+<!--        | -&#45;&#45;&#45;&#45;&#45;&#45; | &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; | &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; |-->
+<!--        | 2.4.13  | 2020.0.6     | 5.3.13       |-->
+<!--        | 2.5.14  | 2020.0.6     | 5.3.20       |-->
+<!--        | 2.6.15  | 2021.0.5     | 5.3.27       |-->
+<!--        | 2.7.18  | 2021.0.5     | 5.3.27       |-->
+
+<!--        | Boot 版本 | Cloud  train |-->
+<!--        | -&#45;&#45;&#45;&#45;&#45;&#45; | &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; |-->
+<!--        | 2.3.x   | Hoxton.SR12  |-->
+<!--        | 2.4.x   | 2020.0.6     |-->
+<!--        | 2.5.x   | 2020.0.6     |-->
+<!--        | 2.6.x   | 2021.0.5     |-->
+<!--        | 2.7.x   | 2021.0.5     |-->
+
+<!--        -->
+<!--        | Boot 版本 | Cloud train |-->
+<!--        | -&#45;&#45;&#45;&#45;&#45;&#45; | -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; |-->
+<!--        | 3.0.x   | 2022.0.x    |-->
+<!--        | 3.1.x   | 2022.0.x    |-->
+<!--        | 3.2.x   | 2023.0.x    |-->
+<!--        // 调整版本 和当前boot版本对应 -->
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Spring AI -->
+        <spring-ai.version>1.0.0-M6</spring-ai.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- RPC框架 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!-- MCP Server 依赖-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.ai</groupId>-->
+<!--            <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>-->
+<!--        </dependency>-->
+        <!--mcp服务器核心依赖— 响应式-->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-mcp-server-webflux-spring-boot-starter</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--springai  -->
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>${spring-ai.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
+</project>
