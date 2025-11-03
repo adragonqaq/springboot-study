@@ -45,6 +45,7 @@
         <module>springboot-circuitBreaker</module>
         <module>springboot-load-balance</module>
         <module>springboot-geohash</module>
+        <module>springboot-websocket-netty</module>
 
 
     </modules>
