@@ -1,4 +1,4 @@
-package com.lzl.ws-netty;
+package com.lzl.wsnetty;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
