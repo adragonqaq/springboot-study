@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lzl.websocket.web;
+package com.lzl.websocket.pojo;
 
 
 public class User {
