@@ -34,11 +34,17 @@ import java.util.Map;
  * 如果不注释掉 WebSocketServerProtocolHandler 相关逻辑，则会导致客户端无法正常连接到 WebSocket 服务端
  */
 @Slf4j
+// @ChannelHandler.Sharable 该注解表明被标注的 ChannelHandler 实例可安全地在多个 :ml-search-more[ChannelPipeline]{text="ChannelPipeline"} 中共享使用，无需担心线程竞争条件。
+// 若未标注，每次添加到管道时需创建新实例以避免状态冲突
+// 注意事项
+//‌线程安全‌：标注 @Sharable 的处理器必须确保自身线程安全，例如避免使用成员变量存储状态信息。
+//‌实例复用限制‌：仅当处理器逻辑完全无状态（如纯函数式处理）时，才能完全避免共享冲突。
 @ChannelHandler.Sharable
 @Component
 @AllArgsConstructor
 public class NioWebSocketHandler extends SimpleChannelInboundHandler<WebSocketFrame> {
 
+    // bean 注入
     private final NioWebSocketChannelPool webSocketChannelPool;
     private final WebSocketProperties webSocketProperties;
 
